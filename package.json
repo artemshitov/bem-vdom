@@ -1,0 +1,27 @@
+{
+  "name": "bem-vdom",
+  "version": "0.1.0",
+  "description": "BEM DSL for virtual-dom",
+  "main": "dist/bem-vdom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:artemshitov/bem-vdom.git"
+  },
+  "keywords": [
+    "bem",
+    "vdom",
+    "virtual-dom",
+    "dsl",
+    "markup",
+    "html"
+  ],
+  "author": "Artem Shitov <inbox@artemshitov.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artemshitov/bem-vdom/issues"
+  },
+  "homepage": "https://github.com/artemshitov/bem-vdom"
+}

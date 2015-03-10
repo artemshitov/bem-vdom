@@ -23,5 +23,17 @@
   "bugs": {
     "url": "https://github.com/artemshitov/bem-vdom/issues"
   },
-  "homepage": "https://github.com/artemshitov/bem-vdom"
+  "homepage": "https://github.com/artemshitov/bem-vdom",
+  "devDependencies": {
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "immutable": "^3.6.4",
+    "ramda": "^0.11.0",
+    "virtual-dom": "^2.0.1"
+  }
 }

@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var browserify = require('browserify');
 var babel = require('gulp-babel');
 var source = require('vinyl-source-stream');
+var del = require('del');
 
 gulp.task('babel', function () {
     gulp.src('./src/bem-vdom.js')
@@ -17,7 +18,13 @@ gulp.task('browserify', ['babel'], function () {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('clean', function () {
+    del.sync(['dist']);
+});
+
 gulp.task('build', ['babel', 'browserify']);
+
+gulp.task('prepublish', ['clean', 'build']);
 
 gulp.task('watch', ['build'], function () {
     gulp.watch('src/**/*.*', ['build']);

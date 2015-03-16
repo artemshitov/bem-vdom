@@ -4,7 +4,8 @@
   "description": "BEM DSL for virtual-dom",
   "main": "dist/bem-vdom.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "./node_modules/.bin/gulp prepublish"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "babelify": "^5.0.4",
     "browserify": "^9.0.3",
+    "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-babel": "^4.0.0",
     "vinyl-source-stream": "^1.1.0"

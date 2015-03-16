@@ -20,8 +20,11 @@ const bemClasses = function bemClasses (baseName, mods) {
     return modClasses;
 };
 
-const flatten = function flatten (xs) {
-    return Array.prototype.concat.apply([], xs);
+
+const flatten = function flatten (arr) {
+  return arr.reduce(function (flat, toFlatten) {
+    return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
+  }, []);
 };
 
 export class BEM {
@@ -98,9 +101,9 @@ export class BEM {
 
     vdom (parentName) {
         let className = this.className(this.baseName(parentName));
-        let children = this.children().map(c =>
-            c instanceof BEM ? c.vdom(parentName || this.name()) : c
-        );
+        let children = this.children().map(function (c) {
+            return c instanceof BEM ? c.vdom(parentName || this.name()) : c;
+        }.bind(this));
         let attrs = {className};
         Object.keys(this.attrs()).forEach((key) => attrs[key] = this.attrs()[key]);
         
@@ -137,6 +140,7 @@ export class Element extends BEM {
 
 export const b = function (name, opts, ...children) {
     let {mods, attrs, tag, classes} = parseOpts(opts);
+    console.log(children);
     return new Block({name, mods, attrs, classes, tag, children: flatten(children)});
 };
 

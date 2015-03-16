@@ -29,3 +29,6 @@ node_modules
 
 # JSHint settings
 .jshintrc
+
+# Dist
+dist/

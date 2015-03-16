@@ -140,7 +140,6 @@ export class Element extends BEM {
 
 export const b = function (name, opts, ...children) {
     let {mods, attrs, tag, classes} = parseOpts(opts);
-    console.log(children);
     return new Block({name, mods, attrs, classes, tag, children: flatten(children)});
 };
 

@@ -1,6 +1,6 @@
 {
   "name": "bem-vdom",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "BEM DSL for virtual-dom",
   "main": "dist/bem-vdom.js",
   "scripts": {

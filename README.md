@@ -1,6 +1,6 @@
 # BEM-VDOM
 
-BEM DSL for your (virtual DOM)[https://github.com/Matt-Esch/virtual-dom]. Proper Readme coming soon.
+BEM DSL for your [virtual DOM](https://github.com/Matt-Esch/virtual-dom). Proper Readme coming soon.
 
 ## Installing
 

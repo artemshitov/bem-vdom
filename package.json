@@ -32,8 +32,6 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "immutable": "^3.6.4",
-    "ramda": "^0.11.0",
     "virtual-dom": "^2.0.1"
   }
 }
